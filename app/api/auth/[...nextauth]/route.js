@@ -1,5 +1,6 @@
 import nextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import SpotifyProvider from "next-auth/providers/spotify";
 
 const authOptions = {
   providers: [
@@ -8,8 +9,8 @@ const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
     SpotifyProvider({
-      clientId: "",
-      clientSecret: "",
+      clientId: process.env.SPOTIFY_CLIENT_ID,
+      clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
     }),
   ],
 };

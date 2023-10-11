@@ -1,10 +1,11 @@
-import Image from "next/image";
-import UserInfo from "./components/UserInfo";
+import UserInfo from "./components/AuthUser";
+import SignInModal from "./components/SignInModal";
 
 export default function Home() {
   return (
-    <div className="grid place-items-center h-screen -mt-24">
+    <div className="grid ">
       <UserInfo />
+      <SignInModal />
     </div>
   );
 }
